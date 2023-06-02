@@ -1,14 +1,12 @@
 package com.example.eksamen24back.service;
 
 import com.example.eksamen24back.model.Race;
-import com.example.eksamen24back.model.Sailboat;
 import com.example.eksamen24back.repository.RaceRepository;
 import com.example.eksamen24back.repository.SailboatRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class RaceService {
@@ -36,15 +34,8 @@ public class RaceService {
     }
 
     public void addSailboatToRace(int raceid, int sailboatid) {
-        //Race race = raceRepository.findById(raceid).get();
-        //Sailboat sailboat = sailboatRepository.findById(sailboatid).get();
-
         Race race = raceRepository.findRaceById(raceid).orElse(null);
-
         race.getSailboats().add(sailboatRepository.findSailboatById(sailboatid).get());
-        //Sailboat sailboat = sailboatRepository.findSailboatById(sailboatid).get();
-        //race.getSailboats().add(sailboat);
-
         raceRepository.save(race);
     }
 

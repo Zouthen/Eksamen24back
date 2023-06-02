@@ -1,7 +1,6 @@
 package com.example.eksamen24back.service;
 
 import com.example.eksamen24back.model.Sailboat;
-import com.example.eksamen24back.model.TestModel;
 import com.example.eksamen24back.repository.SailboatRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

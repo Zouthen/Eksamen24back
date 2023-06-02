@@ -16,7 +16,7 @@ public class Sailboat {
     private String boattype;
     private String points;
 
-    @ManyToMany(mappedBy = "sailboats")
+        @ManyToMany(mappedBy = "sailboats")
     private Set<Race> races = new HashSet<>();
 
     public int getId() {

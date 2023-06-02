@@ -1,8 +1,6 @@
 package com.example.eksamen24back.controller;
 
-import com.example.eksamen24back.model.Race;
 import com.example.eksamen24back.model.Sailboat;
-import com.example.eksamen24back.repository.SailboatRepository;
 import com.example.eksamen24back.service.SailboatService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
